@@ -1,6 +1,7 @@
 import React from "react";
 import logo from '../asset/logo.jpg'
-import NavBar from './NavBar.css'
+import CartWidget from "./CartWidget/CartWidget";
+import './NavBar.css'
 
 export default function navBar() {
   return (
@@ -29,6 +30,8 @@ export default function navBar() {
       <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success" type="submit">Buscar..</button>
+        <a className="navbar-brand w-auto container-logo" href="#"></a>
+        <CartWidget/>
       </form>
     </div>
   </div>

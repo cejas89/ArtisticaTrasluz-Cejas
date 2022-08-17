@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.itemListContainer {
+    border: 1px solid green;
+    width: 50vw;
+    height: auto;
+    margin: auto;
+}
+
+.tittle {
+    font-size: 50px;
+    font-weight: 300;
+    text-decoration: underline;
+    color: black;
+}
+
+.subtittle {    
+    font-size: 30px;
+    font-weight: 300;
+    color: blue;
+
+}
+
+.text {
+    font-size: 10px;
+    font-weight: 300;
+    color: green;
+}
