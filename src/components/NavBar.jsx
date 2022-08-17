@@ -27,9 +27,12 @@ export default function navBar() {
           <a className="nav-link" href="#">Contactanos</a>
         </li>
       </ul>
+      
       <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Buscar..</button>
+        <input className="form-control me-2" type="email" placeholder="Email" aria-label="Search"/>
+        <input className="form-control me-2" type="password" placeholder="Password" aria-label="Search"/>
+        <button className="btn btn-outline-success" type="submit">Sigin</button>
+        <button className="btn btn-outline-success ml-1" type="submit">Register</button>
         <a className="navbar-brand w-auto container-logo" href="#"></a>
         <CartWidget/>
       </form>
