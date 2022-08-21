@@ -1,5 +1,6 @@
 import React from 'react'
 import ItemListContainer from './ItemListContainer'
+import ItemCount from './ItemCount'
 
 export default function ItemContainer() {
     return (
@@ -7,7 +8,9 @@ export default function ItemContainer() {
             <ItemListContainer
             producto = "Este es el primer texto" 
             descripcion = "Este es el segundo texto" 
-            stock = "2"/>          
+            precio="150"/>   
+            <ItemCount stock= "5" initial ="0"/>
+
         </div>
     )
 }

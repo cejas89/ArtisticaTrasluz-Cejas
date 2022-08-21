@@ -3,6 +3,7 @@ import logo from '../asset/logo.jpg'
 import CartWidget from "./CartWidget/CartWidget";
 import './NavBar.css'
 
+
 export default function navBar() {
   return (
     <>
@@ -34,7 +35,7 @@ export default function navBar() {
         <button className="btn btn-outline-success" type="submit">Sigin</button>
         <button className="btn btn-outline-success ml-1" type="submit">Register</button>
         <a className="navbar-brand w-auto container-logo" href="#"></a>
-        <CartWidget/>
+        <CartWidget carrito = "5"/>
       </form>
     </div>
   </div>
