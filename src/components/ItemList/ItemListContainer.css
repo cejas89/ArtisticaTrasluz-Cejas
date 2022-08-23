@@ -5,27 +5,37 @@
 
 .itemListContainer {
     border: 1px solid green;
-    width: 50vw;
+    width: 20vw;
     height: auto;
     margin: auto;
+    border-radius: 20px;
 }
 
-.tittle {
-    font-size: 50px;
-    font-weight: 300;
-    text-decoration: underline;
+.itemImg {
+    width: 25%;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.itemTittle {
+    font-size: 30px;
+    text-align: center;
     color: black;
 }
 
-.subtittle {    
-    font-size: 30px;
-    font-weight: 300;
+.itemSubtittle {    
+    font-size: 20px;
+    text-align: center;
     color: blue;
 
 }
 
-.text {
-    font-size: 10px;
-    font-weight: 300;
+.itemPrice {
+    font-size: 30px;
+    text-align: center;
     color: green;
+}
+
+.itemCount {
+    display: flex;
 }

@@ -1,59 +1,46 @@
 import React from "react";
 import { useState } from "react";
-import ItemContainer from "./ItemContainer";
+import "./ItemCount.css";
+import Button from "@mui/material/Button";
 
-const ItemCount = ({stock, initial, onAdd}) => {
-    
-    const [contador, setContador] = useState(0)
-    const [stockRestante, setStockRestante] = useState(stock) 
+const ItemCount = () => {
+  const [count, setCount] = useState(0);
 
-    const agregar = () => {
-        if(contador<stock) {
-            setContador(contador + 1)
-            setStockRestante((stock - 1) - contador)
-        
-        alert("has agregado con exito el articulo")
-    };
+  const agregar = () => {
+    console.log(count);
+    setCount(count + 1);
+  };
+
+  const eliminar = () => {
+    console.log(count);
+    if (count > 0) {
+      setCount(count - 1);
     }
+  };
 
-    
-    const eliminar = () => {
-        if(contador>0) {
-            alert("desea eliminar el articulo del carrito")
-            setContador(contador - 1)
-            //setStockRestante(contador - 1)
-    };
-    }
+  return (
+    <>
+      <div className="itemCountContainer">
+        <Button variant="contained" color="success" onClick={agregar}>
+        +
+        </Button>
 
-    
+        <p className="itemCount">{count}</p>
 
-    return (
-        <>
-                {
-                    stock>0 ?
-                    <p>Cantidad en stock = {stockRestante}</p>
-                    :
-                    <p>Cantidad en stock = {stockRestante}</p>
-                }
-                
-                
-            <div>
-                <button onClick={agregar}>Agregar</button>
-                <button onClick={eliminar}>Eliminar</button>
+        <Button variant="contained" color="error" onClick={eliminar}>
+        -
+        </Button>
+      </div>
+      <div className="btnAgregar">
+      <Button variant="contained"
+      onClick={() => {
+        alert(`Agregaste ${count} Articulos con exito`)
+        setCount(0)
+      }}>
+      Agregar a carrito</Button>
+      </div>
+    </>
+  );
+};
 
-                {
-                    contador>0 ?
-                    <p>Tienes {contador} articulos cargado al carrito</p>
-                    :
-                    <p>No tienes ningun articulo cargado al carrito</p>
-                }
-
-            </div>
-        </>
-    )
-
-
-
-}
-
-export default ItemCount
+export default ItemCount;
