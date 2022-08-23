@@ -5,11 +5,10 @@ export default function ItemContainer() {
   return (
     <div style={{
         display: "flex",
-        background: "cian"
       }}>
       <ItemListContainer
         producto="Producto1"
-        descripcion="Este es el segundo texto, Este es el segundo texto"
+        descripcion="Este es el segundo texto"
         precio="150.00"
       />
       <ItemListContainer

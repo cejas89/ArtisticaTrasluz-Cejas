@@ -1,7 +1,6 @@
 import React from 'react'
 import './ItemListContainer.css'
 import ItemCount from './ItemCount'
-import { useState } from 'react'
 
 
 export default function ItemListContainer({producto, descripcion, precio}) {
@@ -12,7 +11,7 @@ export default function ItemListContainer({producto, descripcion, precio}) {
         <h1 className='itemTittle'>{producto}</h1>
         <h2 className='itemSubtittle'>{descripcion}</h2>
         <p className='itemPrice'>Ars {precio} </p>
-        <ItemCount stock= "5" initial ="0"/>
+        <ItemCount stock= {5} initial ={0}/>
       </div>  
     </>
   )

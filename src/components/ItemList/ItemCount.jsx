@@ -3,8 +3,9 @@ import { useState } from "react";
 import "./ItemCount.css";
 import Button from "@mui/material/Button";
 
-const ItemCount = () => {
-  const [count, setCount] = useState(0);
+
+const ItemCount = ({initial}) => {
+  const [count, setCount] = useState(initial);
 
   const agregar = () => {
     console.log(count);
