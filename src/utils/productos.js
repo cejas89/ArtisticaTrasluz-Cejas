@@ -1,6 +1,6 @@
 const productos = [
     {
-        id : '0',
+        id : 0,
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'blue',
@@ -11,7 +11,7 @@ const productos = [
     },
 
     {
-        id : '1',
+        id : 1,
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'red',
@@ -22,7 +22,7 @@ const productos = [
     },
 
     {
-        id : '2',
+        id : 2,
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'green',
@@ -33,7 +33,7 @@ const productos = [
     },
 
     {
-        id : '3',
+        id : 3,
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'pink',

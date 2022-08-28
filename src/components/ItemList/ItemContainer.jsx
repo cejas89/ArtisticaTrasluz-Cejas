@@ -5,7 +5,10 @@ import { ItemDetail } from "./ItemDetail";
 export default function ItemContainer() {
   return ( 
     <>
-    <ItemList style={{display: "flex"}}/>
+    <ItemList/>
+
+    <hr/>
+    
     <ItemDetail/>
     </>
   )

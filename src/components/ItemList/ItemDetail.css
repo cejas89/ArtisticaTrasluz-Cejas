@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.itemContainer {
+    display: flex;
+    margin: 10px;
+}

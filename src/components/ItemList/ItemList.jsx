@@ -22,7 +22,7 @@ export const ItemList = () => {
         loading ? <h1>Cargando.... <CircularProgress/></h1>
         :
 
-        <div >
+        <div className='itemContainer'>
         {data.map(p => (
             <Item key={p.id} data = {p} />
         ))}
