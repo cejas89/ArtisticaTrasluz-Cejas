@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import customFetch from '../../utils/customFetch'
-import { Item } from './Item'
 import { CircularProgress } from '@mui/material'
-import { Prueba } from '../Prueba'
+import { Item } from './Item'
 
 
 export const ItemList = () => {
@@ -28,7 +27,7 @@ export const ItemList = () => {
 
         <div className="row row-cols-3 row-cols-md-4 g-4 m-2 p-5">
         {data.map(p => (
-            <Prueba key={p.id} data = {p} />
+            <Item key={p.id} data = {p} />
         ))}
         </div>
     }

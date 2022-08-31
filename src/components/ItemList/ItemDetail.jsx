@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import customFetch from "../../utils/customFetch";
 import { CircularProgress } from "@mui/material";
 import "./ItemDetail.css"
-import ItemCount from "./ItemCount";
 
 
 
@@ -39,13 +38,13 @@ export const ItemDetail = () => {
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src="https://picsum.photos/50/50" className="d-block w-100" alt="..."/>
+      <img src="https://picsum.photos/200/200" className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
-      <img src="https://picsum.photos/50/50" className="d-block w-100" alt="..."/>
+      <img src="https://picsum.photos/200/200" className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
-      <img src="https://picsum.photos/50/50" className="d-block w-100" alt="..."/>
+      <img src="https://picsum.photos/200/200" className="d-block w-100" alt="..."/>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
