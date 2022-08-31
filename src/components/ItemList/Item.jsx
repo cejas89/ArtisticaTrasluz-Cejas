@@ -14,6 +14,7 @@ export const Item = ({data}) => {
         <h5 className="card-title text-center">{tittle}</h5>
         <p><strong>Codigo: </strong>{id}</p>
         <p className="card-text fw-light fs-6">{description}</p>
+        <button>Ver mas..</button>
         <p className='itemPrice fw-bold fs-1 text-center'>Ars {price} </p>
       </div>
       
