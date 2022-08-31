@@ -18,6 +18,18 @@ export default function navBar() {
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="#">Productos</a>
         </li>
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categorias
+          </a>
+          <ul className="dropdown-menu">
+            <li><a className="dropdown-item" href="#">Libreria</a></li>
+            <li><hr className="dropdown-divider"/></li>
+            <li><a className="dropdown-item" href="#">Artistica</a></li>
+            
+            
+          </ul>
+        </li>
         <li className="nav-item">
           <a className="nav-link" href="#">Carrito</a>
         </li>

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import customFetch from '../../utils/customFetch'
 import { Item } from './Item'
 import { CircularProgress } from '@mui/material'
+import { Prueba } from '../Prueba'
+
 
 export const ItemList = () => {
  const [data, setData] = useState ([])
@@ -13,6 +15,8 @@ export const ItemList = () => {
         setLoading(false)
       })
     }, [])
+
+    console.log(data);
     
   return (
 
@@ -22,9 +26,9 @@ export const ItemList = () => {
         loading ? <h1>Cargando.... <CircularProgress/></h1>
         :
 
-        <div className='itemContainer'>
+        <div className="row row-cols-3 row-cols-md-4 g-4 m-2 p-5">
         {data.map(p => (
-            <Item key={p.id} data = {p} />
+            <Prueba key={p.id} data = {p} />
         ))}
         </div>
     }

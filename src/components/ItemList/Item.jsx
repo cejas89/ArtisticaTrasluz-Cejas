@@ -18,6 +18,7 @@ const {id, name, color, tittle , price} = data;
       <p className='itemPrice'>Ars {price} </p>
       <ItemCount stock= {5} initial ={0}/>
     </div>  
+    
   </>
   )
 }

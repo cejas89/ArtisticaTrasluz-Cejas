@@ -1,45 +1,171 @@
+const generateId = () => Math.random().toString(36).substr(2, 18);
+
 const productos = [
     {
-        id : 0,
+        id : generateId(),
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'blue',
         tittle: "Acrilico",
         description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
         price: '200',
+        origen: 'china',
+        categoria: 'libreria',
+        subcategoria: 'pinturas',
         stock: '250'
     },
 
     {
-        id : 1,
+        id : generateId(),
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'red',
         tittle: "Acrilico",
         description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
         price: '200',
+        origen: 'eeuu',
+        categoria: 'libreria',
+        subcategoria: 'pinturas',
         stock: '150'
     },
 
     {
-        id : 2,
+        id : generateId(),
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'green',
         tittle: "Acrilico",
         description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
         price: '200',
+        origen: 'eeuu',
+        categoria: 'libreria',
+        subcategoria: 'pinturas',
         stock: '100'
     },
 
     {
-        id : 3,
+        id : generateId(),
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'pink',
         tittle: "Acrilico",
         description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
         price: '200',
+        origen: 'brasil',
+        categoria: 'libreria',
+        subcategoria: 'pinturas',
+        stock: '50'
+    },
+
+    {
+        id : generateId(),
+        img: 'https://picsum.photos/200/300',
+        name: 'ACRÍLICOS DECORATIVOS',
+        color: 'blue',
+        tittle: "Acrilico",
+        description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
+        price: '200',
+        origen: 'china',
+        categoria: 'libreria',
+        subcategoria: 'pinturas',
+        stock: '250'
+    },
+
+    {
+        id : generateId(),
+        img: 'https://picsum.photos/200/300',
+        name: 'ACRÍLICOS DECORATIVOS',
+        color: 'red',
+        tittle: "Acrilico",
+        description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
+        price: '200',
+        origen: 'eeuu',
+        categoria: 'libreria',
+        subcategoria: 'pinturas',
+        stock: '150'
+    },
+
+    {
+        id : generateId(),
+        img: 'https://picsum.photos/200/300',
+        name: 'ACRÍLICOS DECORATIVOS',
+        color: 'green',
+        tittle: "Acrilico",
+        description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
+        price: '200',
+        origen: 'eeuu',
+        categoria: 'libreria',
+        subcategoria: 'pinturas',
+        stock: '100'
+    },
+
+    {
+        id : generateId(),
+        img: 'https://picsum.photos/200/300',
+        name: 'ACRÍLICOS DECORATIVOS',
+        color: 'pink',
+        tittle: "Acrilico",
+        description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
+        price: '200',
+        origen: 'brasil',
+        categoria: 'libreria',
+        subcategoria: 'pinturas',
+        stock: '50'
+    },
+
+    {
+        id : generateId(),
+        img: 'https://picsum.photos/200/300',
+        name: 'ACRÍLICOS DECORATIVOS',
+        color: 'blue',
+        tittle: "Acrilico",
+        description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
+        price: '200',
+        origen: 'china',
+        categoria: 'libreria',
+        subcategoria: 'pinturas',
+        stock: '250'
+    },
+
+    {
+        id : generateId(),
+        img: 'https://picsum.photos/200/300',
+        name: 'ACRÍLICOS DECORATIVOS',
+        color: 'red',
+        tittle: "Acrilico",
+        description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
+        price: '200',
+        origen: 'eeuu',
+        categoria: 'libreria',
+        subcategoria: 'pinturas',
+        stock: '150'
+    },
+
+    {
+        id : generateId(),
+        img: 'https://picsum.photos/200/300',
+        name: 'ACRÍLICOS DECORATIVOS',
+        color: 'green',
+        tittle: "Acrilico",
+        description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
+        price: '200',
+        origen: 'eeuu',
+        categoria: 'libreria',
+        subcategoria: 'pinturas',
+        stock: '100'
+    },
+
+    {
+        id : generateId(),
+        img: 'https://picsum.photos/200/300',
+        name: 'ACRÍLICOS DECORATIVOS',
+        color: 'pink',
+        tittle: "Acrilico",
+        description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
+        price: '200',
+        origen: 'brasil',
+        categoria: 'libreria',
+        subcategoria: 'pinturas',
         stock: '50'
     }
 ]
