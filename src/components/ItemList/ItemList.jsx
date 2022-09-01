@@ -2,18 +2,29 @@ import React, { useState, useEffect } from 'react'
 import customFetch from '../../utils/customFetch'
 import { CircularProgress } from '@mui/material'
 import { Item } from './Item'
+import { useParams } from 'react-router-dom'
 
 
 export const ItemList = () => {
+
+const {categoria} = useParams();
  const [data, setData] = useState ([])
  const [loading, setLoading] = useState(true)
 
+ console.log(categoria);
+
     useEffect(() => {
       customFetch.then(data => {
+        if(!categoria){
         setData(data)
         setLoading(false)
+      } else {
+        const nuevaData = data.filter(producto => producto.categoria === categoria )
+        setData(nuevaData);
+        setLoading(false)
+      }
       })
-    }, [])
+    }, [categoria])
 
     console.log(data);
     

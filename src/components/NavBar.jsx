@@ -24,9 +24,9 @@ export default function navBar() {
             Categorias
           </a>
           <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Libreria</a></li>
+            <li><NavLink className="dropdown-item" to="/productos/libreria">Libreria</NavLink></li>
             <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Artistica</a></li>
+            <li><NavLink className="dropdown-item" to="/productos/artistica">Artistica</NavLink></li>
             
             
           </ul>

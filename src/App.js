@@ -14,11 +14,12 @@ export default function App () {
       <BrowserRouter>
       <NavBar/>
       <Routes>
-          <Route path="/" element={<ItemList/>}/>
-          <Route path="/itemDetail" element={<ItemDetailContainer/>}/>
-          <Route path="/productos" element={<ItemList/>}/>
-          <Route path="/error" element={<PaginaError/>}/>
-          <Route path="/contacto" element={<PaginaContacto/>}/>
+          <Route path="/" element={<ItemList/>}/>{/*Ruta que nos envia al home, mediante el brand*/}
+          <Route path="/itemDetail/" element={<ItemDetailContainer/>}/>{/*Ruta que nos al detalle del articulo*/}
+          <Route path="/productos" element={<ItemList/>}/>{/*Ruta que nos envia al home, mediante el brand*/}
+          <Route path="/productos/:categoria" element={<ItemList/>}/>{/*Ruta que nos a ItemList, pero selecciona la categoria*/}
+          <Route path="/contacto" element={<PaginaContacto/>}/>{/*Ruta que nos envia la pagina de contacto*/}
+          <Route path="/error" element={<PaginaError/>}/>{/*Ruta que nos devuelve pagina de error no encontrado*/}
       </Routes>
       </BrowserRouter>
       

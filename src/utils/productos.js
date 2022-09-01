@@ -2,7 +2,7 @@ const generateId = () => Math.random().toString(36).substr(2, 18);
 
 const productos = [
     {
-        id : generateId(),
+        id : '01',
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'blue',
@@ -16,7 +16,7 @@ const productos = [
     },
 
     {
-        id : generateId(),
+        id : '02',
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'red',
@@ -30,7 +30,7 @@ const productos = [
     },
 
     {
-        id : generateId(),
+        id : '03',
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'green',
@@ -44,7 +44,7 @@ const productos = [
     },
 
     {
-        id : generateId(),
+        id : '04',
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'pink',
@@ -58,7 +58,7 @@ const productos = [
     },
 
     {
-        id : generateId(),
+        id : '05',
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'blue',
@@ -72,7 +72,7 @@ const productos = [
     },
 
     {
-        id : generateId(),
+        id : '06',
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'red',
@@ -86,7 +86,7 @@ const productos = [
     },
 
     {
-        id : generateId(),
+        id : '07',
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'green',
@@ -100,7 +100,7 @@ const productos = [
     },
 
     {
-        id : generateId(),
+        id : '08',
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'pink',
@@ -114,7 +114,7 @@ const productos = [
     },
 
     {
-        id : generateId(),
+        id : '09',
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'blue',
@@ -122,13 +122,13 @@ const productos = [
         description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
         price: '200',
         origen: 'china',
-        categoria: 'libreria',
+        categoria: 'artistica',
         subcategoria: 'pinturas',
         stock: '250'
     },
 
     {
-        id : generateId(),
+        id : '10',
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'red',
@@ -136,13 +136,13 @@ const productos = [
         description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
         price: '200',
         origen: 'eeuu',
-        categoria: 'libreria',
+        categoria: 'artistica',
         subcategoria: 'pinturas',
         stock: '150'
     },
 
     {
-        id : generateId(),
+        id : '11',
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'green',
@@ -156,7 +156,7 @@ const productos = [
     },
 
     {
-        id : generateId(),
+        id : '12',
         img: 'https://picsum.photos/200/300',
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'pink',
@@ -164,7 +164,7 @@ const productos = [
         description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
         price: '200',
         origen: 'brasil',
-        categoria: 'libreria',
+        categoria: 'artistica',
         subcategoria: 'pinturas',
         stock: '50'
     }

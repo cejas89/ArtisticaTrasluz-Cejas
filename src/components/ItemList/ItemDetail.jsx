@@ -2,18 +2,20 @@ import React, { useState, useEffect } from "react";
 import customFetch from "../../utils/customFetch";
 import { CircularProgress } from "@mui/material";
 import "./ItemDetail.css"
+import { useParams } from "react-router-dom";
 
 
 
 export const ItemDetail = () => {
+  const {productoId} = useParams();
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     customFetch.then((data) => {
-      setData(data.find((prod) => prod.color === "blue"));
+      setData(data.filter((prod) => prod.id === "abc"));
       setLoading(false);
-    });
+    })
   }, []);
 
  //console.log(data);
