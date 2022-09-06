@@ -28,6 +28,7 @@ const {categoria} = useParams();
 
     console.log(data);
     
+    
   return (
 
     <>

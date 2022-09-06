@@ -16,7 +16,7 @@ export const Item = ({data}) => {
         <p><strong>Codigo:</strong>{id}</p>
         <p><strong>Categoria:</strong>{categoria}</p>
         <p className="card-text fw-light fs-6">{description}</p>
-        <Link to="/itemDetail/" className="card-text fw-light fs-6">Ver mas..</Link>
+        <NavLink to={`/producto/${id}`} className="card-text fw-light fs-6">Ver mas..</NavLink>
         <p className='itemPrice fw-bold fs-1 text-center'>Ars {price} </p>
       </div>
       

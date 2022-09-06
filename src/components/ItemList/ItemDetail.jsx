@@ -3,6 +3,8 @@ import customFetch from "../../utils/customFetch";
 import { CircularProgress } from "@mui/material";
 import "./ItemDetail.css"
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import ItemCount from "./ItemCount";
 
 
 
@@ -10,15 +12,22 @@ export const ItemDetail = () => {
   const {productoId} = useParams();
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate()
 
   useEffect(() => {
-    customFetch.then((data) => {
-      setData(data.filter((prod) => prod.id === "abc"));
-      setLoading(false);
+    customFetch.then(data => {
+      if(!productoId){
+      setData(data)
+      setLoading(false)
+    } else {
+      const nuevaData = data.find(producto => producto.id === productoId )
+      setData(nuevaData);
+      setLoading(false)
+    }
     })
   }, []);
 
- //console.log(data);
+ console.log(data);
 
   return (
     <>
@@ -29,6 +38,7 @@ export const ItemDetail = () => {
       ) : (
         <div>
           <h1>Item Detail container</h1>
+          <button onClick={() => navigate(-1)}>go back</button>
           <div className="card m-3">
   <div className="row g-0 h-50">
     <div className="col-md-4 h-50">
@@ -65,12 +75,23 @@ export const ItemDetail = () => {
         <p className="card-text">Codigo: {data.id}</p>
         <p className="card-text">Color: {data.color}</p>
         <p className="card-text">{data.description}</p>
+
+        <div className="d-flex justify-content-between">
+
+        <div>
         <p className="card-text">Procedencia: {data.origen}</p>
         <span className="card-text"><strong>Stock disponible: </strong>{data.stock}</span>
         <p className="card-text">Categoria: {data.categoria}</p>
         <p className="card-text">SubCategoria: {data.subcategoria}</p>
+        </div>
 
+        <div>
+        <ItemCount stock= {5} initial ={0}/>
+        </div>
+
+        </div>
         <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+        
       </div>
     </div>
   </div>
