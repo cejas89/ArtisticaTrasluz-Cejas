@@ -1,9 +1,13 @@
-const generateId = () => Math.random().toString(36).substr(2, 18);
+function random(min, max) {
+    return Math.floor((Math.random() * (max - min + 1)) + min);
+    
+}
 
+const aleatorio = random(1, 100);
 const productos = [
     {
         id : '01',
-        img: 'https://picsum.photos/200/300',
+        img: `https://picsum.photos/200/300?random=1`,
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'blue',
         tittle: "Acrilico",
@@ -17,7 +21,7 @@ const productos = [
 
     {
         id : '02',
-        img: 'https://picsum.photos/200/300',
+        img: `https://picsum.photos/200/300?random=2`,
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'red',
         tittle: "Acrilico",
@@ -31,7 +35,7 @@ const productos = [
 
     {
         id : '03',
-        img: 'https://picsum.photos/200/300',
+        img: `https://picsum.photos/200/300?random=3`,
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'green',
         tittle: "Acrilico",
@@ -45,7 +49,7 @@ const productos = [
 
     {
         id : '04',
-        img: 'https://picsum.photos/200/300',
+        img: `https://picsum.photos/200/300?random=4`,
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'pink',
         tittle: "Acrilico",
@@ -59,7 +63,7 @@ const productos = [
 
     {
         id : '05',
-        img: 'https://picsum.photos/200/300',
+        img: `https://picsum.photos/200/300?random=5`,
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'blue',
         tittle: "Acrilico",
@@ -73,7 +77,7 @@ const productos = [
 
     {
         id : '06',
-        img: 'https://picsum.photos/200/300',
+        img: `https://picsum.photos/200/300?random=6`,
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'red',
         tittle: "Acrilico",
@@ -87,7 +91,7 @@ const productos = [
 
     {
         id : '07',
-        img: 'https://picsum.photos/200/300',
+        img: `https://picsum.photos/200/300?random=7`,
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'green',
         tittle: "Acrilico",
@@ -101,7 +105,7 @@ const productos = [
 
     {
         id : '08',
-        img: 'https://picsum.photos/200/300',
+        img: `https://picsum.photos/200/300?random=8`,
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'pink',
         tittle: "Acrilico",
@@ -115,7 +119,7 @@ const productos = [
 
     {
         id : '09',
-        img: 'https://picsum.photos/200/300',
+        img: `https://picsum.photos/200/300?random=9`,
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'blue',
         tittle: "Acrilico",
@@ -129,7 +133,7 @@ const productos = [
 
     {
         id : '10',
-        img: 'https://picsum.photos/200/300',
+        img: `https://picsum.photos/200/300?random=10`,
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'red',
         tittle: "Acrilico",
@@ -143,7 +147,7 @@ const productos = [
 
     {
         id : '11',
-        img: 'https://picsum.photos/200/300',
+        img: `https://picsum.photos/200/300?random=11`,
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'green',
         tittle: "Acrilico",
@@ -157,7 +161,7 @@ const productos = [
 
     {
         id : '12',
-        img: 'https://picsum.photos/200/300',
+        img: `https://picsum.photos/200/300?random=12`,
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'pink',
         tittle: "Acrilico",

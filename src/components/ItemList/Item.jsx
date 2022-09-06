@@ -3,14 +3,14 @@ import ItemCount from './ItemCount'
 import {NavLink, Link} from 'react-router-dom';
 
 export const Item = ({data}) => {
-    const {id, tittle , description, price, categoria} = data;
+    const {id, tittle , description, price, categoria, img} = data;
     console.log(data)
   return (
   
   
   <div className="col">
     <div className="card h-100">
-      <img src="https://picsum.photos/100/100" className="card-img-top w-50 m-auto mt-1" alt="..."/>
+      <img src={img} className="card-img-top w-50 m-auto mt-1" alt="..."/>
       <div className="card-body">
         <h5 className="card-title text-center">{tittle}</h5>
         <p><strong>Codigo:</strong>{id}</p>

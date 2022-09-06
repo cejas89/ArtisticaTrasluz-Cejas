@@ -5,6 +5,7 @@ import { ItemDetailContainer } from "./components/ItemList/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { PaginaError } from "./components/PaginaError";
 import { PaginaContacto } from "./components/PaginaContacto";
+import { Footer } from "./components/Footer/Footer";
 
 
 
@@ -23,6 +24,8 @@ export default function App () {
           <Route path="/error" element={<PaginaError/>}/>{/*Ruta que nos devuelve pagina de error no encontrado*/}
       </Routes>
       </BrowserRouter>
+
+      <Footer/>
       
       
     </div>
