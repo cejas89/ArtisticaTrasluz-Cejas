@@ -2,43 +2,18 @@ import React, { useState, useEffect } from "react";
 import customFetch from "../../utils/customFetch";
 import { CircularProgress } from "@mui/material";
 import "./ItemDetail.css"
-import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import ItemCount from "./ItemCount";
 
-
-
-export const ItemDetail = () => {
-  const {productoId} = useParams();
-  const [data, setData] = useState({});
-  const [loading, setLoading] = useState(true);
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    customFetch.then(data => {
-      if(!productoId){
-      setData(data)
-      setLoading(false)
-    } else {
-      const nuevaData = data.find(producto => producto.id === productoId )
-      setData(nuevaData);
-      setLoading(false)
-    }
-    })
-  }, []);
-
- console.log(data);
+export const ItemDetail = ( {data} ) => {
+const {id, tittle} = data;
+console.log(data);
+  
 
   return (
     <>
-      {loading ? (
-        <h1>
-          Cargando.... <CircularProgress />
-        </h1>
-      ) : (
-        <div>
+         <div>
           <h1>Item Detail container</h1>
-          <button onClick={() => navigate(-1)}>go back</button>
+          
           <div className="card m-3">
   <div className="row g-0 h-50">
     <div className="col-md-4 h-50">
@@ -72,17 +47,17 @@ export const ItemDetail = () => {
     <div className="col-md-6 h-50">
       <div className="card-body">
         <h5 className="card-title">{data.tittle}</h5>
-        <p className="card-text">Codigo: {data.id}</p>
-        <p className="card-text">Color: {data.color}</p>
+        <p className="card-text">Codigo:{data.id} </p>
+        <p className="card-text">Color: {data.color} </p>
         <p className="card-text">{data.description}</p>
 
         <div className="d-flex justify-content-between">
 
         <div>
         <p className="card-text">Procedencia: {data.origen}</p>
-        <span className="card-text"><strong>Stock disponible: </strong>{data.stock}</span>
+        <span className="card-text"><strong>Stock disponible: {data.stock} </strong></span>
         <p className="card-text">Categoria: {data.categoria}</p>
-        <p className="card-text">SubCategoria: {data.subcategoria}</p>
+        <p className="card-text">SubCategoria: {data.subcategoria} </p>
         </div>
 
         <div>
@@ -97,7 +72,7 @@ export const ItemDetail = () => {
   </div>
 </div>
         </div>
-      )}
+      
     </>
   );
 };
