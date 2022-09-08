@@ -3,10 +3,17 @@ import customFetch from "../../utils/customFetch";
 import { CircularProgress } from "@mui/material";
 import "./ItemDetail.css"
 import ItemCount from "./ItemCount";
+import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 export const ItemDetail = ( {data} ) => {
-const {id, tittle} = data;
+const [value, setValue] = useState(0);
 console.log(data);
+
+const onAdd = (count) => {
+  setValue(count)
+  console.log(count);
+}
   
 
   return (
@@ -61,9 +68,21 @@ console.log(data);
         </div>
 
         <div>
-        <ItemCount stock= {5} initial ={0}/>
+        <ItemCount stock= {5} initial ={0} onAdd= {onAdd}/>
         </div>
 
+        </div>
+
+        <div>
+              <h1>Agregaste {value} productos al carrito</h1> 
+        <Link to="/carrito">
+        <Button variant="contained" color="success" className="m-10">
+        Finalizar compra
+        </Button>
+        </Link>
+        <Button variant="contained" color="error">
+        Vaciar Carrito
+        </Button>
         </div>
         <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
         

@@ -4,7 +4,7 @@ import "./ItemCount.css";
 import Button from "@mui/material/Button";
 
 
-const ItemCount = ({initial}) => {
+const ItemCount = ({initial, onAdd}) => {
   const [count, setCount] = useState(initial);
 
   const agregar = () => {
@@ -16,8 +16,12 @@ const ItemCount = ({initial}) => {
     console.log(count);
     if (count > 0) {
       setCount(count - 1);
+      onAdd(count)
     }
   };
+
+
+
 
   return (
     <>
@@ -28,17 +32,20 @@ const ItemCount = ({initial}) => {
 
         <p className="itemCount">{count}</p>
 
-        <Button variant="contained" color="error" onClick={eliminar}>
+        <Button variant="contained" color="error"
+        onClick={()=>eliminar}>
         -
         </Button>
       </div>
       <div className="btnAgregar">
       <Button variant="contained" className="m-1"
       onClick={() => {
+        onAdd(count)
         alert(`Agregaste ${count} Articulos con exito`)
         setCount(0)
       }}>
       Agregar a carrito</Button>
+
       
       </div>
     </>
