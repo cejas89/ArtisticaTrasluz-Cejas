@@ -72,18 +72,23 @@ const onAdd = (count) => {
         </div>
 
         <div>
-              <h1>Agregaste {value} productos al carrito</h1> 
+              
         
-        <Link to="/carrito">
+        { (value !== 0) ?
+          <Link to="/carrito">
         <Button variant="contained" color="success" className="m-10">
         Finalizar compra
         </Button>
         </Link>
-        <Button variant="contained" color="error">
+        :""
+        }
+        <Button onClick={()=>{setValue(0)} } variant="contained" color="error">
         Vaciar Carrito
         </Button>
         </div>
+        <p className="card-text"><small className="text-muted">Tienes {value} agregados al carrito</small></p>
         <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+        
         
       </div>
     </div>
