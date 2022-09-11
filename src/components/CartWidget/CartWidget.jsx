@@ -9,7 +9,7 @@ export default function CartWidget({carrito}) {
     <>
         <div className='cartWidget-container btn btn-outline-success'>
         <BsCartFill/>
-        <a>{carrito} </a>
+        <a>{carrito}</a>
         </div>
     </>
   )

@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import customFetch from "../../utils/customFetch";
-import { CircularProgress } from "@mui/material";
+import React, { useState } from "react";
 import "./ItemDetail.css"
 import ItemCount from "./ItemCount";
 import Button from "@mui/material/Button";
@@ -75,6 +73,7 @@ const onAdd = (count) => {
 
         <div>
               <h1>Agregaste {value} productos al carrito</h1> 
+        
         <Link to="/carrito">
         <Button variant="contained" color="success" className="m-10">
         Finalizar compra
