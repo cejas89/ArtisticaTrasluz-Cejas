@@ -3,6 +3,7 @@ import logo from '../asset/logo.jpg'
 import CartWidget from "./CartWidget/CartWidget";
 import './NavBar.css'
 import {NavLink, Link} from 'react-router-dom';
+import { Cart } from "./CartWidget/Cart";
 
 
 export default function navBar() {
@@ -32,7 +33,7 @@ export default function navBar() {
           </ul>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Carrito</a>
+        <Link to="/carrito" className="nav-link">Carrito</Link>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="#">Ofertas</a>
@@ -48,7 +49,11 @@ export default function navBar() {
         <button className="btn btn-outline-success" type="submit">Sigin</button>
         <button className="btn btn-outline-success ml-1" type="submit">Register</button>
         <a className="navbar-brand w-auto container-logo" href="#"></a>
-        <CartWidget carrito = "5"/>
+        <ul>
+        <li className="nav-item">
+        <Link to="/carrito" className="nav-link"><CartWidget/></Link>
+        </li>
+        </ul>
       </form>
     </div>
   </div>

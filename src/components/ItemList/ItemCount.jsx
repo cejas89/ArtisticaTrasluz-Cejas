@@ -41,7 +41,6 @@ const ItemCount = ({initial, onAdd}) => {
       <Button variant="contained" className="m-1"
       onClick={() => {
         onAdd(count)
-        alert(`Agregaste ${count} Articulos con exito`)
         setCount(0)
       }}>
       Agregar a carrito</Button>

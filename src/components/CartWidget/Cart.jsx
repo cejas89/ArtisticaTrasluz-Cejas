@@ -1,29 +1,16 @@
-import React, { useState } from "react";
-import "./ItemDetail.css"
-import ItemCount from "./ItemCount";
-import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
-import { useContext } from "react";
-import {CartContext} from '../../context/CartContext';
+import React from 'react'
+import { Button } from '@mui/material'
+import { useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
 
-export const ItemDetail = ( {data} ) => {
-const {addProduct, isInCart} = useContext(CartContext)
-const [value, setValue] = useState(0);
-
-
-
-const onAdd = (count) => {
-  const newProducts = {...data, cantidad: count}
-  setValue(count)
-  addProduct(newProducts)
-}
-
+export const Cart = ({data}) => {
+  const {removeProduct, vaciarCarrito, isInCart} = useContext(CartContext);
 
   return (
+
     <>
         <div>
           <h1>Item Detail container</h1>
-          
           <div className="card m-3">
   <div className="row g-0 h-50">
     <div className="col-md-4 h-50">
@@ -69,39 +56,18 @@ const onAdd = (count) => {
         <p className="card-text">Categoria: {data.categoria}</p>
         <p className="card-text">SubCategoria: {data.subcategoria} </p>
         </div>
-
-        <div>
-        <ItemCount stock= {5} initial ={0} onAdd= {onAdd}/>
         </div>
-
-        </div>
-
-        <div>
-              
-        
-        { (value !== 0) ?
-          <Link to="/carrito">
-        <Button variant="contained" color="success" className="m-10">
-        Finalizar compra
-        </Button>
-        </Link>
-        :""
-        }
-        <Button onClick={()=>{setValue(0)} } variant="contained" color="error">
-        Vaciar Carrito
-        </Button>
-        </div>
-        <p className="card-text"><small className="text-muted">Tienes {value} agregados al carrito</small></p>
-        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-  
-        
+        <p className="card-text"><small className="text-muted">{data.cantidad}</small></p>
+        <button onClick={()=> removeProduct(data.id)}>Eliminar producto</button>   
         
       </div>
     </div>
   </div>
-</div>
+          </div>
+          <hr/>
+          <button onClick={()=> vaciarCarrito()}>Vaciar Carrito</button>
         </div>
       
     </>
-  );
-};
+  )
+}

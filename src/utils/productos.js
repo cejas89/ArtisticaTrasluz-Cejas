@@ -6,7 +6,7 @@ function random(min, max) {
 const aleatorio = random(1, 100);
 const productos = [
     {
-        id : '01',
+        id : "01",
         img: `https://picsum.photos/200/300?random=1`,
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'blue',

@@ -2,15 +2,18 @@ import React from 'react'
 import {BsCartFill} from 'react-icons/bs'
 import './CartWidget.css'
 import ItemCount from '../ItemList/ItemCount';
+import { Link } from '@mui/material';
 
-export default function CartWidget({carrito}) {
-  console.log(carrito);
+export default function CartWidget() {
+  
   return (
     <>
-        <div className='cartWidget-container btn btn-outline-success'>
+      <Link to="/carrito">
+      <button className='cartWidget-container btn btn-outline-success'>
         <BsCartFill/>
-        <a>{carrito}</a>
-        </div>
+        <a>5</a>
+        </button>
+        </Link>
     </>
   )
 }
