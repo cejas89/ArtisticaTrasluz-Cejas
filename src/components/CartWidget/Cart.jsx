@@ -55,9 +55,13 @@ export const Cart = ({data}) => {
         <span className="card-text"><strong>Stock disponible: {data.stock} </strong></span>
         <p className="card-text">Categoria: {data.categoria}</p>
         <p className="card-text">SubCategoria: {data.subcategoria} </p>
+        <p className="card-text">Cantidad: {data.count}</p>
+        <p className="card-text">Precio por unidad: ${data.price} </p>
+        <p className="card-text">Precio total compra: ${data.precioTotal} </p>
+        
         </div>
         </div>
-        <p className="card-text"><small className="text-muted">{data.cantidad}</small></p>
+        
         <button onClick={()=> removeProduct(data.id)}>Eliminar producto</button>   
         
       </div>

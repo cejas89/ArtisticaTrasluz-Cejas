@@ -13,7 +13,8 @@ const [value, setValue] = useState(0);
 
 
 const onAdd = (count) => {
-  const newProducts = {...data, cantidad: count}
+  const newProducts = {...data, count}
+  console.log(newProducts);
   setValue(count)
   addProduct(newProducts)
 }
@@ -68,6 +69,10 @@ const onAdd = (count) => {
         <span className="card-text"><strong>Stock disponible: {data.stock} </strong></span>
         <p className="card-text">Categoria: {data.categoria}</p>
         <p className="card-text">SubCategoria: {data.subcategoria} </p>
+        </div>
+
+        <div>
+        <p>Price: {data.price}</p>
         </div>
 
         <div>
