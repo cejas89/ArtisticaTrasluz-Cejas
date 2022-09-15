@@ -4,11 +4,14 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
 export const Cart = ({ data }) => {
-  const { removeProduct, vaciarCarrito, isInCart } = useContext(CartContext);
+  const { removeProduct, vaciarCarrito, productCartList } = useContext(CartContext);
 
+    console.log(productCartList);
   return (
+
     <>
-      <div>
+      {  
+       <div>
         <h1>Carrito de Compras</h1>
         <button onClick={() => vaciarCarrito()}>Vaciar Carrito</button>
         <div className="card m-3">
@@ -128,6 +131,8 @@ export const Cart = ({ data }) => {
           </div>
         </div>
       </div>
+      
+      }
     </>
   );
 };

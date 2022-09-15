@@ -4,7 +4,7 @@ import {NavLink, Link} from 'react-router-dom';
 
 export const Item = ({data}) => {
     const {id, tittle , description, price, categoria, img} = data;
-    console.log(data)
+    
   return (
   
   

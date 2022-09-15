@@ -28,7 +28,6 @@ export const CartProvider = ({ children }) => {
 
   const isInCart = (id) => {
     const elementExsist = productCartList.some((elem) => elem.id === id);
-    
     return elementExsist;
   };
 
@@ -44,6 +43,16 @@ export const CartProvider = ({ children }) => {
     alert("El carrito ha sido vaciado");
   };
 
+  const productosTotal = () => {
+    const totalProductos = productCartList.reduce((acu, product) => acu + product.count, 0  )
+    if (totalProductos === 0) {
+      return ("")
+    } else {
+      return totalProductos;
+    }
+    
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -52,6 +61,7 @@ export const CartProvider = ({ children }) => {
         removeProduct,
         vaciarCarrito,
         isInCart,
+        productosTotal
       }}
     >
       {children}
