@@ -7,14 +7,13 @@ import { useContext } from "react";
 import {CartContext} from '../../context/CartContext';
 
 export const ItemDetail = ( {data} ) => {
-const {addProduct, isInCart} = useContext(CartContext)
+const {addProduct} = useContext(CartContext)
 const [value, setValue] = useState(0);
 
 
 
 const onAdd = (count) => {
   const newProducts = {...data, count}
-  console.log(newProducts);
   setValue(count)
   addProduct(newProducts)
 }
@@ -86,7 +85,7 @@ const onAdd = (count) => {
         
         { (value !== 0) ?
           <Link to="/carrito">
-        <Button variant="contained" color="success" className="m-10">
+        <Button variant="contained" color="success" className="m-10 btnFinalizarCompra">
         Finalizar compra
         </Button>
         </Link>

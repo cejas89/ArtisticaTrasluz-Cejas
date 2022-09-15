@@ -12,8 +12,10 @@ export const Cart = ({ data }) => {
     <>
       {  
        <div>
+        <div className="d-flex justify-content-around">
         <h1>Carrito de Compras</h1>
         <button onClick={() => vaciarCarrito()}>Vaciar Carrito</button>
+        </div>
         <div className="card m-3">
           <div className="row g-0 h-50">
             <div className="col-md-4 h-50">
@@ -119,13 +121,12 @@ export const Cart = ({ data }) => {
                     </p>
                   </div>
                 </div>
-                <button className="m-1 w-30">
+                <Button variant="contained" color="success" className="me-1">
                   Finalizar Compra
-                </button>
-
-                <button onClick={() => removeProduct(data.id)} className="m-1 w-30">
+                </Button>
+                <Button onClick={() => removeProduct(data.id)} variant="contained" color="error">
                   Eliminar producto
-                </button>
+                </Button>
               </div>
             </div>
           </div>

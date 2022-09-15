@@ -7,3 +7,9 @@
     display: flex;
     margin: 10px;
 }
+
+.btnFinalizarCompra {
+    text-decoration: none;
+    list-style: none;
+    
+}

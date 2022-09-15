@@ -9,7 +9,7 @@ import { Cart } from "./CartWidget/Cart";
 export default function navBar() {
   return (
     <>
-    <nav className="navbar navbar-expand-lg bg-light">
+    <nav className="navbar navbar-expand-lg bg-light sticky-top ">
   <div className="container-fluid">
     <Link to="/"><a className="navbar-brand w-auto container-logo" href="#"><img className = "logo rounded-circle" src={logo} alt="" width="60" height="60"/></a></Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,11 +49,9 @@ export default function navBar() {
         <button className="btn btn-outline-success" type="submit">Sigin</button>
         <button className="btn btn-outline-success ml-1" type="submit">Register</button>
         <a className="navbar-brand w-auto container-logo" href="#"></a>
-        <ul>
-        <li className="nav-item">
+
         <Link to="/carrito" className="nav-link"><CartWidget/></Link>
-        </li>
-        </ul>
+
       </form>
     </div>
   </div>
