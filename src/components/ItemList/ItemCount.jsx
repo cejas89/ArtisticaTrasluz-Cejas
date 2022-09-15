@@ -28,7 +28,7 @@ const ItemCount = ({ initial, onAdd }) => {
 
         <p className="itemCount">{count}</p>
 
-        <Button variant="contained" color="error" onClick={() => eliminar}>
+        <Button variant="contained" color="error" onClick={eliminar}>
           -
         </Button>
       </div>

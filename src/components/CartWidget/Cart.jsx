@@ -2,9 +2,15 @@ import React from "react";
 import { Button } from "@mui/material";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+
+
 
 export const Cart = ({ data }) => {
   const { removeProduct, vaciarCarrito, productCartList } = useContext(CartContext);
+  const MySwal = withReactContent(Swal)
 
     console.log(productCartList);
   return (
@@ -124,7 +130,26 @@ export const Cart = ({ data }) => {
                 <Button variant="contained" color="success" className="me-1">
                   Finalizar Compra
                 </Button>
-                <Button onClick={() => removeProduct(data.id)} variant="contained" color="error">
+                <Button onClick={() => 
+                  MySwal.fire({
+                  title: 'Estas seguro que quieres eliminar el articulo?',
+                  text: "",
+                  icon: 'warning',
+                  showCancelButton: true,
+                  confirmButtonColor: '#3085d6',
+                  cancelButtonColor: '#d33',
+                  confirmButtonText: 'Si, eliminalo!'
+                 }).then((result) => {
+                  if (result.isConfirmed) {
+                    removeProduct(data.id)
+                    MySwal.fire(
+                      'Eliminado!',
+                      'El articulo ha sido eliminado.',
+                      'success'
+                    )
+                  }
+                })
+                  } variant="contained" color="error">
                   Eliminar producto
                 </Button>
               </div>

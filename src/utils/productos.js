@@ -3,7 +3,7 @@ function random(min, max) {
     
 }
 
-const aleatorio = random(1, 100);
+
 const productos = [
     {
         id : "01",

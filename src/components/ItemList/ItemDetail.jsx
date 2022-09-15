@@ -5,10 +5,14 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import {CartContext} from '../../context/CartContext';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
 
 export const ItemDetail = ( {data} ) => {
 const {addProduct} = useContext(CartContext)
 const [value, setValue] = useState(0);
+const MySwal = withReactContent(Swal)
 
 
 
@@ -84,8 +88,16 @@ const onAdd = (count) => {
               
         
         { (value !== 0) ?
-          <Link to="/carrito">
-        <Button variant="contained" color="success" className="m-10 btnFinalizarCompra">
+          <Link to="/carrito" className="btnFinalizarCompra">
+        <Button variant="contained" color="success" className="me-2" onClick={()=>
+          Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: `Has agregado con exito ${value} articulos al carrito`,
+          showConfirmButton: false,
+          timer: 2000
+        })}>
+          
         Finalizar compra
         </Button>
         </Link>
