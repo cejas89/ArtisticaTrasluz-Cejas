@@ -103,9 +103,6 @@ const onAdd = (count) => {
         </Link>
         :""
         }
-        <Button onClick={()=>{setValue(0)} } variant="contained" color="error">
-        Vaciar Carrito
-        </Button>
         </div>
         <p className="card-text"><small className="text-muted">Tienes {value} agregados al carrito</small></p>
         <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>

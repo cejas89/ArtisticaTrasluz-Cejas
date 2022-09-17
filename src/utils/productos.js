@@ -1,8 +1,3 @@
-function random(min, max) {
-    return Math.floor((Math.random() * (max - min + 1)) + min);
-    
-}
-
 
 const productos = [
     {
@@ -10,7 +5,7 @@ const productos = [
         img: `https://picsum.photos/200/300?random=1`,
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'blue',
-        tittle: "Acrilico",
+        tittle: "Acrilico Blue",
         description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
         price: '200',
         origen: 'china',
@@ -24,11 +19,11 @@ const productos = [
         img: `https://picsum.photos/200/300?random=2`,
         name: 'ACRÍLICOS DECORATIVOS',
         color: 'red',
-        tittle: "Acrilico",
+        tittle: "Acrilico Red",
         description: 'Producto formulado con emulsiones acrílicas y pigmentos puros. Sus colores son intensos, luminosos, resistente a la luz y mezclables entre sí. Por su viscosidad y alto poder cubritivo pueden ser aplicados sobre todo tipo de superficies (madera, yeso, bizcocho cerámico, papel, cartón). Diluído con agua y medium retardador AD, pueden ser utilizados en técnicas de acuarela. Se aplica a pincel sobre superficies previamente selladas.',
-        price: '200',
+        price: '150',
         origen: 'eeuu',
-        categoria: 'libreria',
+        categoria: 'artistica',
         subcategoria: 'pinturas',
         stock: '150'
     },

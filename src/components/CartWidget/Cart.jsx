@@ -9,7 +9,7 @@ import withReactContent from 'sweetalert2-react-content'
 
 
 export const Cart = ({ data }) => {
-  const { removeProduct, vaciarCarrito, productCartList } = useContext(CartContext);
+  const { removeProduct, productCartList } = useContext(CartContext);
   const MySwal = withReactContent(Swal)
 
     console.log(productCartList);
@@ -18,10 +18,7 @@ export const Cart = ({ data }) => {
     <>
       {  
        <div>
-        <div className="d-flex justify-content-around">
-        <h1>Carrito de Compras</h1>
-        <button onClick={() => vaciarCarrito()}>Vaciar Carrito</button>
-        </div>
+        
         <div className="card m-3">
           <div className="row g-0 h-50">
             <div className="col-md-4 h-50">

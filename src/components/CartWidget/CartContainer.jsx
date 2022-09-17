@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 export const CartContainer = () => {
-const {productCartList} = useContext(CartContext)
+const {productCartList, vaciarCarrito} = useContext(CartContext)
 
 
 
@@ -22,6 +22,10 @@ const {productCartList} = useContext(CartContext)
         </Link>
       </div>)
     :(<div>
+      <div className="d-flex justify-content-around">
+        <h1>Carrito de Compras</h1>
+        <button onClick={() => vaciarCarrito()}>Vaciar Carrito</button>
+        </div>
     {productCartList.map(p => (
         <Cart key= {p.id} data = {p}/>
     ))}
