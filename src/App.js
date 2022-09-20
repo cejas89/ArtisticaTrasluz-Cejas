@@ -8,6 +8,7 @@ import { Footer } from "./components/Footer/Footer";
 import { ItemListContainer } from "./components/ItemList/ItemListContainer";
 import { CartContainer } from "./components/CartWidget/CartContainer";
 import { CartProvider } from "./context/CartContext";
+import ItemCollection from "./components/ItemList/ItemCollection";
 
 
 
@@ -25,6 +26,7 @@ export default function App () {
           <Route path="/contacto" element={<PaginaContacto/>}/>{/*Ruta que nos envia la pagina de contacto*/}
           <Route path="/error" element={<PaginaError/>}/>{/*Ruta que nos devuelve pagina de error no encontrado*/}
           <Route path="/carrito" element={<CartContainer/>}/>{/*Ruta que nos devuelve pagina de error no encontrado*/}
+          <Route path="/firebase" element={<ItemCollection/>}/>
       </Routes>
       </BrowserRouter>
 
