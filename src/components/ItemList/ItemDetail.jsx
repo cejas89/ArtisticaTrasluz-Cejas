@@ -39,13 +39,13 @@ const onAdd = (count) => {
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src="https://picsum.photos/200/200?random=1" className="d-block w-100" alt="..."/>
+      <img src={data.img} className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
-      <img src="https://picsum.photos/200/200?random=2" className="d-block w-100" alt="..."/>
+      <img src={data.img} className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
-      <img src="https://picsum.photos/200/200?random=3" className="d-block w-100" alt="..."/>
+      <img src={data.img} className="d-block w-100" alt="..."/>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

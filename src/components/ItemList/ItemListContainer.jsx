@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import customFetch from '../../utils/customFetch';
 import { CircularProgress } from '@mui/material';
+import { collection, docs, getDocs } from 'firebase/firestore';
+import { db } from '../../utils/firebase';
 
 export const ItemListContainer = () => {
 
@@ -13,7 +15,33 @@ const {categoria} = useParams();
 
  console.log(categoria);
 
-    useEffect(() => {
+ useEffect(() => {
+      const getData = async () => {
+        const query = collection(db, "items")
+        const response = await getDocs(query);
+        console.log(response);
+        const data = response.docs.map(doc => {
+          const newDocs = {
+            ...doc.data(),
+            id: doc.id
+          }
+          return newDocs 
+        });
+        console.log("datos", data);
+        if(!categoria){
+        setData(data)
+        setLoading(false)
+      } else {
+        const nuevaData = data.filter(producto => producto.categoria === categoria )
+        setData(nuevaData);
+        setLoading(false)
+      }
+      }
+      getData();
+ }, [categoria])
+ 
+
+  /*  useEffect(() => {
       customFetch.then(data => {
         if(!categoria){
         setData(data)
@@ -24,7 +52,7 @@ const {categoria} = useParams();
         setLoading(false)
       }
       })
-    }, [categoria])
+    }, [categoria])*/
 
     console.log(data);
     

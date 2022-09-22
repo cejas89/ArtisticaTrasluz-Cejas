@@ -13,6 +13,16 @@ export default function ItemCollection() {
         const query = collection(db,"items");
         const response = await getDocs(query);
         console.log(response)
+        console.log(response.docs)
+        const datos = response.docs.map(doc=> {
+          const newDoc = {  
+          ...doc.data(),
+          id: doc.id
+        }
+        return newDoc;
+      });
+        
+        console.log("datos", datos);
     }
 
         getData()
