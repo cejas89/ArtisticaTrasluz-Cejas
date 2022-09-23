@@ -19,10 +19,10 @@ export const CartProvider = ({ children }) => {
       newList[productIndex].precioTotal = newList[productIndex].count * product.price;
      
     } else {
-      const newList = [...productCartList, product];
+      const newProduct = {...product, cantidad: product.count, precioTotal: product.count *product.price}
+      const newList = [...productCartList];
       setProductCartList(newList);
-      console.log(newList);
-      
+      newList.push(newProduct);
     }
   };
 
@@ -44,12 +44,20 @@ export const CartProvider = ({ children }) => {
   };
 
   const productosTotal = () => {
-    const totalProductos = productCartList.reduce((acu, product) => acu + product.count, 0  )
+    const totalProductos = productCartList.reduce((acc, product) => acc + product.count, 0  )
     if (totalProductos === 0) {
       return ("")
     } else {
       return totalProductos;
     }
+    
+  }
+
+  const preciosTotal = () => {
+    const preciosTotal = productCartList.reduce((acc, product) => acc + product.precioTotal, 0)
+   
+      return preciosTotal;
+    
     
   }
 
@@ -61,7 +69,8 @@ export const CartProvider = ({ children }) => {
         removeProduct,
         vaciarCarrito,
         isInCart,
-        productosTotal
+        productosTotal,
+        preciosTotal
       }}
     >
       {children}

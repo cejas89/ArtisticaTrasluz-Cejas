@@ -9,10 +9,9 @@ import withReactContent from 'sweetalert2-react-content'
 
 
 export const Cart = ({ data }) => {
-  const { removeProduct, productCartList } = useContext(CartContext);
+  const { removeProduct, productCartList, preciosTotal } = useContext(CartContext);
   const MySwal = withReactContent(Swal)
-
-    console.log(productCartList);
+   
   return (
 
     <>
@@ -120,7 +119,7 @@ export const Cart = ({ data }) => {
                       Precio por unidad: ${data.price}{" "}
                     </p>
                     <p className="card-text">
-                      Precio total compra: ${data.precioTotal}{" "}
+                      Precio total compra: ${data.precioTotal}
                     </p>
                   </div>
                 </div>
