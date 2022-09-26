@@ -9,6 +9,7 @@ import { ItemListContainer } from "./components/ItemList/ItemListContainer";
 import { CartContainer } from "./components/CartWidget/CartContainer";
 import { CartProvider } from "./context/CartContext";
 import ItemCollection from "./components/ItemList/ItemCollection";
+import { Home } from "./components/Inicio/Home";
 
 
 
@@ -27,6 +28,7 @@ export default function App () {
           <Route path="/error" element={<PaginaError/>}/>{/*Ruta que nos devuelve pagina de error no encontrado*/}
           <Route path="/carrito" element={<CartContainer/>}/>{/*Ruta que nos devuelve pagina de error no encontrado*/}
           <Route path="/firebase" element={<ItemCollection/>}/>
+          <Route path="/hom" element={<Home/>}/>
       </Routes>
       </BrowserRouter>
 
