@@ -20,7 +20,7 @@ export default function App () {
       <BrowserRouter>
       <NavBar/>
       <Routes>
-          <Route path="/" element={<ItemListContainer/>}/>{/*Ruta que nos envia al home, mediante el brand*/}
+          <Route path="/" element={<Home/>}/>{/*Ruta que nos envia al home, mediante el brand*/}
           <Route path="producto/:productoId" element={<ItemDetailContainer/>}/>{/*Ruta que nos al detalle del articulo*/}
           <Route path="/productos" element={<ItemListContainer/>}/>{/*Ruta que nos envia al home, mediante el brand*/}
           <Route path="/productos/:categoria" element={<ItemListContainer/>}/>{/*Ruta que nos a ItemList, pero selecciona la categoria*/}
