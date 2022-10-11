@@ -6,3 +6,17 @@
 .navbar-brand {
     margin-right: 100px;
 }
+
+.nav-link {
+    border-radius: 15px;
+}
+
+.nav-link:hover {
+    background-color: #198754;
+    border-radius: 15px;
+    text-decoration: underline black;
+}
+
+.ul-container{
+    width: 80%;
+}

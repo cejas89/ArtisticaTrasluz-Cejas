@@ -20,7 +20,7 @@ const container = {
             <img src={lapices} className="card-img-top mt-1" style={card} alt="imagen"/>
         <div className="card-body">
             <p className="card-text">Visita nuestro amplio catalogo de productos de libreria</p>
-            <NavLink to={`/productos/libreria`} className="card-text fw-light fs-6">Ver mas..</NavLink>
+            <NavLink to={`/productos/libreria`} className="card-text fw-light fs-6 text-decoration-none">Ver mas..</NavLink>
         </div>
     </div>
 
@@ -28,7 +28,7 @@ const container = {
             <img src={oleos} className="card-img-top mt-1" style={card} alt="imagen"/>
         <div className="card-body">
             <p className="card-text">Visita nuestro amplio catalogo de productos de artistica</p>
-            <NavLink to={`/productos/artistica`} className="card-text fw-light fs-6">Ver mas..</NavLink>
+            <NavLink to={`/productos/artistica`} className="card-text fw-light fs-6 vermas text-decoration-none">Ver mas..</NavLink>
         </div>
     </div>
 </>

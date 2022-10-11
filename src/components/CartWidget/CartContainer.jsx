@@ -6,11 +6,16 @@ import { Cart } from "./Cart";
 import { Link } from "react-router-dom";
 import { db } from "../../utils/firebase";
 import { collection, addDoc, doc, updateDoc } from "firebase/firestore";
+import { Button } from "@mui/material";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
 
 export const CartContainer = () => {
   const { productCartList, vaciarCarrito, preciosTotal } =
     useContext(CartContext);
   const [idOrden, setIdOrden] = useState("");
+  const MySwal = withReactContent(Swal)
 
   const enviarOrden = (e) => {
     e.preventDefault();
@@ -48,31 +53,76 @@ export const CartContainer = () => {
       ) : (
         <div>
           <h1>Carrito de Compras</h1>
-          <button onClick={() => vaciarCarrito()}>Vaciar Carrito</button>
+
+          {idOrden ? <p>Su orden ha sido registrada con el id <strong>{idOrden}</strong></p> 
+          
+          :
+          <div className="d-flex w-100">
+
+          <div className="w-35">
           {productCartList.map((p) => (
             <Cart key={p.id} data={p} />
           ))}
 
-          <div>
-            <h1 className="text-center">
-              Precios total del carrito: ${preciosTotal()}
-            </h1>
           </div>
-          <div>
-            <form onSubmit={enviarOrden}>
-              <label className="m-2" htmlFor="" required>Ingresa tu Nombre: </label>
+  
+          <div className="w-100 border mb-5">
+            <h1 className="text-center">Ingresa tus datos para generar la orden</h1>
+            <form onSubmit={enviarOrden} className="border">
+              <label className="m-2" htmlFor="" required>Nombre: </label>
               <input type="text" placeholder="nombre" /><br/>
-              <label className="m-2" htmlFor="">Ingresa tu Direccion: </label>
+              <label className="m-2" htmlFor="">Direccion: </label>
               <input type="text" placeholder="direccion" /><br/>
-              <label className="m-2" htmlFor="">Ingresa tu Telefono: </label>
+              <label className="m-2" htmlFor="">Telefono: </label>
               <input type="text" placeholder="telefono" /><br/>
-              <label className="m-2" htmlFor="">Ingresa tu Email: </label>
+              <label className="m-2" htmlFor="">Email: </label>
               <input type="email" placeholder="email" /><br/>
-              <button type="submit">Enviar</button>
+              <Button type="submit" variant="contained" color="success" className="me-1">
+                  Enviar
+                  
+              </Button>
+              
+              <Button onClick={() => 
+                  MySwal.fire({
+                  title: 'Estas seguro que deseas vaciar el carrito???',
+                  text: "",
+                  icon: 'warning',
+                  showCancelButton: true,
+                  confirmButtonColor: '#3085d6',
+                  cancelButtonColor: '#d33',
+                  confirmButtonText: 'Si, vacialo!'
+                 }).then((result) => {
+                  if (result.isConfirmed) {
+                    vaciarCarrito()
+                    MySwal.fire(
+                      'Eliminado!',
+                      'El carrito ha sido vaciado con exito.',
+                      'success'
+                    )
+                  }
+                })
+                  } variant="contained" color="error">
+                  Vaciar carrito
+                </Button>
             </form>
 
-            {idOrden ? <p>Su orden ha sido registrada con el id <strong>{idOrden}</strong></p> : ""}
+            <div className="d-flex justify-content-around mt-5">
+            <h1 className="text-center">
+              Precios total del carrito: ${preciosTotal()}
+
+
+
+
+            </h1>
           </div>
+
+          
+          </div>
+          </div> }
+
+
+
+
         </div>
       )}
     </>

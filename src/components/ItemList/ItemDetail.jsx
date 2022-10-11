@@ -26,7 +26,7 @@ const onAdd = (count) => {
   return (
     <>
         <div>
-          <h1>Item Detail container</h1>
+          <h1>Detalle de producto</h1>
           
           <div className="card m-3">
   <div className="row g-0 h-50">
@@ -69,13 +69,13 @@ const onAdd = (count) => {
 
         <div>
         <p className="card-text">Procedencia: {data.origen}</p>
-        <span className="card-text"><strong>Stock disponible: {data.stock} </strong></span>
+        <p className="card-text">Stock disponible: {data.stock}</p>
         <p className="card-text">Categoria: {data.categoria}</p>
         <p className="card-text">SubCategoria: {data.subcategoria} </p>
         </div>
 
         <div>
-        <p>Price: {data.price}</p>
+        <p className="precio">Precio: ARS {data.price}</p>
         </div>
 
         <div>

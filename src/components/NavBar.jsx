@@ -16,9 +16,9 @@ export default function navBar() {
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-between ul-container">
         <li className="nav-item">
-          <NavLink className="nav-link active" aria-current="page" to="/productos">Productos</NavLink>
+          <NavLink className="nav-link" aria-current="page" to="/productos">Productos</NavLink>
         </li>
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -35,24 +35,22 @@ export default function navBar() {
         <li className="nav-item">
         <Link to="/carrito" className="nav-link">Carrito</Link>
         </li>
+
+        {
         <li className="nav-item">
           <a className="nav-link" href="#">Ofertas</a>
-        </li>        
+        </li> 
+        }       
         <li className="nav-item">
           <Link to="/contacto" className="nav-link">Contactanos</Link>
         </li>
       </ul>
       
-      <form className="d-flex" role="search">
-        <input className="form-control me-2" type="email" placeholder="Email" aria-label="Search"/>
-        <input className="form-control me-2" type="password" placeholder="Password" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Sigin</button>
-        <button className="btn btn-outline-success ml-1" type="submit">Register</button>
-        <a className="navbar-brand w-auto container-logo" href="#"></a>
+   
 
         <Link to="/carrito" className="nav-link"><CartWidget/></Link>
 
-      </form>
+    
     </div>
   </div>
 </nav>

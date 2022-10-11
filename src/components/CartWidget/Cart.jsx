@@ -18,7 +18,7 @@ export const Cart = ({ data }) => {
       {  
        <div>
         
-        <div className="card m-3">
+        <div className="card me-3 w-30">
           <div className="row g-0 h-50">
             <div className="col-md-4 h-50">
               <div
@@ -51,8 +51,8 @@ export const Cart = ({ data }) => {
                 <div className="carousel-inner">
                   <div className="carousel-item active">
                     <img
-                      src="https://picsum.photos/200/200?random=1"
-                      className="d-block w-100"
+                      src={data.img}
+                      className="d-block w-50 m-auto"
                       alt="..."
                     />
                   </div>

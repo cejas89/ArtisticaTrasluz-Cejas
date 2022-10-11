@@ -40,7 +40,7 @@ export const CartProvider = ({ children }) => {
 
   const vaciarCarrito = () => {
     setProductCartList([]);
-    alert("El carrito ha sido vaciado");
+    
   };
 
   const productosTotal = () => {
